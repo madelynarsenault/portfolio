@@ -13,43 +13,17 @@ import Hide from '../components/Hide';
 
 const Background = () => (
   <div>
-    <Triangle
-      color="secondaryLight"
-      height={['80vh', '80vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="background"
-      height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
-      invertX
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '40vh']}
-      width={['75vw', '60vw']}
-      invertX
-      invertY
-    />
-
-    <Triangle
-      color="backgroundDark"
-      height={['25vh', '20vh']}
-      width={['100vw', '100vw']}
-      invertY
-    />
+    
+    
   </div>
 );
 
-const CARD_HEIGHT = '200px';
+const CARD_HEIGHT = '320px';
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
 const Title = styled(Text)`
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   display: table;
@@ -59,7 +33,7 @@ const Title = styled(Text)`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 70px;
   width: 100%;
   width: calc(100% - ${CARD_HEIGHT});
 
@@ -70,7 +44,7 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   margin: auto;
-  width: ${CARD_HEIGHT};
+  width: 600px;
 
   ${MEDIA_QUERY_SMALL} {
     width: calc(${CARD_HEIGHT} / 2);
@@ -78,7 +52,7 @@ const ImageContainer = styled.div`
 `;
 
 const ProjectImage = styled(Image)`
-  width: ${CARD_HEIGHT};
+  width: 600px;
   height: ${CARD_HEIGHT};
   padding: 40px;
   margin-top: 0px;
@@ -112,7 +86,7 @@ const Project = ({
   publishedDate,
   logo,
 }) => (
-  <Card p={0}>
+  <Card p={2}>
     <Flex style={{ height: CARD_HEIGHT }}>
       <TextContainer>
         <span>
@@ -177,7 +151,7 @@ Project.propTypes = {
 
 const Projects = () => (
   <Section.Container id="projects" Background={Background}>
-    <Section.Header name="Projects" icon="💻" label="notebook" />
+    <Section.Header name="Projects" icon="" label="notebook" />
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
@@ -192,7 +166,7 @@ const Projects = () => (
               type
               logo {
                 title
-                image: resize(width: 200, quality: 100) {
+                image: resize(width: 500, quality: 100) {
                   src
                 }
               }
@@ -201,7 +175,7 @@ const Projects = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="350px">
+        <CardContainer minWidth="550px">
           {contentfulAbout.projects.map((p, i) => (
             <Fade bottom delay={i * 200} key={p.id}>
               <Project {...p} />

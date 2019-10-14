@@ -15,27 +15,7 @@ const MEDIUM_URL = 'https://medium.com';
 
 const Background = () => (
   <div>
-    <Triangle
-      color="backgroundDark"
-      height={['15vh', '10vh']}
-      width={['100vw', '100vw']}
-      invertX
-    />
-
-    <Triangle
-      color="secondary"
-      height={['50vh', '40vh']}
-      width={['70vw', '40vw']}
-      invertY
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['40vh', '15vh']}
-      width={['100vw', '100vw']}
-      invertX
-      invertY
-    />
+   
   </div>
 );
 
@@ -107,7 +87,7 @@ const MorePosts = ({ username, name, number }) => (
         <EllipsisHeading fontSize={5} my={2}>
           Hooray! &nbsp;
           <span role="img" aria-label="party">
-            🎉
+            
           </span>
         </EllipsisHeading>
         <Heading lineHeight={1.5}>
@@ -182,15 +162,40 @@ const Writing = () => (
 
       return (
         isMediumUserDefined && (
-          <Section.Container id="writing" Background={Background}>
-            <Section.Header name="Writing" icon="✍️" label="writing" />
-            <CardContainer minWidth="300px">
+          <Section.Container id="Skills" Background={Background}>
+            <Section.Header name="Skills and info" icon="" label="writing" />
+            <div className="div1">
+           <div className="skillsDiv">
+             <h1 className="skills2">Skills</h1>
+             <ul className="codeTypes">
+               <li>React</li>
+               <li>Node.JS</li>
+               <li>SQL</li>
+               <li>SASS</li>
+               <li>Javascript</li>
+               <li>CSS</li>
+               <li>HTML</li>
+
+             </ul>
+             
+          </div>
+          <div className="infoDiv">
+            <h1 className="info">Info</h1>
+            <ul className="personalInfo">
+              <li>Name- Madelyn Arsenault</li>
+              <li>DOB- 08/24/1999</li>
+              <li>Email- madelyn.arsenault@gmail.com</li>
+              <li>Location- Dallas, TX</li>
+            </ul>
+          </div>
+          </div>
+            {/* <CardContainer minWidth="300px">
               {posts.map(({ Component, ...rest }) => (
                 <Fade bottom key={rest.id}>
                   <Component {...rest} key={rest.id} />
                 </Fade>
               ))}
-            </CardContainer>
+            </CardContainer> */}
           </Section.Container>
         )
       );

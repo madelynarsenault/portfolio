@@ -48,12 +48,12 @@ const Footer = () => (
           <FooterContainer>
             <Fade left>
               <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} Portfolio - Powered by `}</span>
-                <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
+                <span>{`${name}'s Portfolio was made with `}</span>
+                {/* <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
                 <span> and </span>
                 <Link href="https://www.contentful.com/" mr={1}>
                   Contentful
-                </Link>
+                </Link> */}
                 <span role="img" aria-label="heart">
                   ❤️
                 </span>
@@ -72,7 +72,7 @@ const Footer = () => (
         </Box>
       );
     }}
-  />
-);
+    />
+    );
 
 export default Footer;

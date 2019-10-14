@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     box-sizing: border-box; 
     margin: 0;
-    font-family: Cabin, 'Open Sans', sans-serif;
+    font-family:'Montserrat', sans-serif;
     font-display: swap;
     font-display: fallback;
     overflow-x: hidden;
