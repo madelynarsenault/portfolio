@@ -167,7 +167,7 @@ const Projects = () => (
               type
               logo {
                 title
-                image: resize(width: 380, quality: 100) {
+                image: resize(width: 270, quality: 100) {
                   src
                 }
               }
