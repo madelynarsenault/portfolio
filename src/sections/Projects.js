@@ -19,6 +19,7 @@ const Background = () => (
 );
 
 const CARD_HEIGHT = '320px';
+// const CARD_WIDTH
 
 const MEDIA_QUERY_SMALL = '@media (max-width: 400px)';
 
@@ -33,9 +34,9 @@ const Title = styled(Text)`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 70px;
+  padding: 85px;
   width: 100%;
-  width: calc(100% - ${CARD_HEIGHT});
+  width: 100%);
 
   ${MEDIA_QUERY_SMALL} {
     width: calc(100% - (${CARD_HEIGHT} / 2));
@@ -44,7 +45,7 @@ const TextContainer = styled.div`
 
 const ImageContainer = styled.div`
   margin: auto;
-  width: 600px;
+  width: 100px;
 
   ${MEDIA_QUERY_SMALL} {
     width: calc(${CARD_HEIGHT} / 2);
@@ -52,7 +53,7 @@ const ImageContainer = styled.div`
 `;
 
 const ProjectImage = styled(Image)`
-  width: 600px;
+  width: 10vw;
   height: ${CARD_HEIGHT};
   padding: 40px;
   margin-top: 0px;
@@ -90,7 +91,7 @@ const Project = ({
     <Flex style={{ height: CARD_HEIGHT }}>
       <TextContainer>
         <span>
-          <Title my={2} pb={1}>
+          <Title my={1} pb={1}>
             {name}
           </Title>
         </span>
@@ -166,7 +167,7 @@ const Projects = () => (
               type
               logo {
                 title
-                image: resize(width: 480, quality: 100) {
+                image: resize(width: 380, quality: 100) {
                   src
                 }
               }
@@ -175,7 +176,7 @@ const Projects = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="500px">
+        <CardContainer minWidth="600px">
           {contentfulAbout.projects.map((p, i) => (
             <Fade bottom delay={i * 200} key={p.id}>
               <Project {...p} />
