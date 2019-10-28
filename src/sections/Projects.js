@@ -166,7 +166,7 @@ const Projects = () => (
               type
               logo {
                 title
-                image: resize(width: 500, quality: 100) {
+                image: resize(width: 480, quality: 100) {
                   src
                 }
               }
@@ -175,7 +175,7 @@ const Projects = () => (
         }
       `}
       render={({ contentfulAbout }) => (
-        <CardContainer minWidth="550px">
+        <CardContainer minWidth="500px">
           {contentfulAbout.projects.map((p, i) => (
             <Fade bottom delay={i * 200} key={p.id}>
               <Project {...p} />

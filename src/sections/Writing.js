@@ -174,7 +174,8 @@ const Writing = () => (
                <li>SASS</li>
                <li>Javascript</li>
                <li>CSS</li>
-               <li>HTMLlll</li>
+               <li>HTML5</li>
+               <li>Express</li>
 
              </ul>
              
