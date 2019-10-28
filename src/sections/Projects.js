@@ -53,7 +53,7 @@ const ImageContainer = styled.div`
 `;
 
 const ProjectImage = styled(Image)`
-  width: 10vw;
+  width: 30vw;
   height: ${CARD_HEIGHT};
   padding: 40px;
   margin-top: 0px;
