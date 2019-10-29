@@ -29,7 +29,7 @@ font-family: 'Averia Serif Libre';
     width:44vw;
 }
 .imgContainer1{
-    width:90vw;
+    width:150vw;
 }
 .projectTitle1{
     margin-top:50px;
@@ -40,6 +40,7 @@ font-family: 'Averia Serif Libre';
 }
 .projectContent1{
     line-height: 25px;
+    font-size:1.5ch;
 }
 .projectImage2{
     width:25vw;
