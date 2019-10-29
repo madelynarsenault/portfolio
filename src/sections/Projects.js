@@ -101,7 +101,7 @@ const Project = ({
       </TextContainer>
 
       <ImageContainer className="imgContainer1">
-        <ProjectImage src={logo.image.src} alt={logo.title} />
+        <ProjectImage className="projectImage2" src={logo.image.src} alt={logo.title} />
         <ProjectTag>
           <Flex
             style={{
