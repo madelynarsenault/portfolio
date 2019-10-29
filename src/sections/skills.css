@@ -24,3 +24,20 @@ li{
 .info, .skills2{
 font-family: 'Averia Serif Libre';
 }
+
+.cardContainer1{
+    width:44vw;
+}
+.imgContainer1{
+    width:90vw;
+}
+.projectTitle1{
+    margin-top:50px;
+    font-weight: bolder;
+    font-size:2.5ch;
+    text-decoration: underline;
+    /* text-underline-position: below; */
+}
+.projectContent1{
+    line-height: 25px;
+}
